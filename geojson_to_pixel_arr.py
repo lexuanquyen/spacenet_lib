@@ -9,10 +9,13 @@ from osgeo import gdal, osr
 import numpy as np
 import json
 import sys
+import os
 
 # Import geo-tools from SpaceNetChallenge/utilities.
-# https://github.com/motokimura/SpaceNetChallenge_utilities
-sys.path.append("../utilities/python")
+# https://github.com/motokimura/spacenet_utilities
+__this_dir = os.path.dirname(__file__)
+sys.path.append(os.path.normpath(os.path.join(__this_dir, "utilities/python")))
+
 from spaceNetUtilities import geoTools as gT
 
 
